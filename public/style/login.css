@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+input{
+    margin-left: 35%;
+    margin-right: 50%;
+    align-items: center;
+    width: 30%;
+    height: 20px;
+}
+
+button{
+    margin-left: 35%;
+    width: 30.5%;
+    height: 25px;
+}
+
+input, button{
+    margin-top: 10px;
+}
+
