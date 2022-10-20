@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tela Login</title>
 
-    <!-- update the version number as needed -->
-    <script src="js/firebaseConfig.js"></script>
-    <!--    <script defer src="/__/firebase/9.12.1/firebase-app-compat.js"></script> -->
-    <!-- include only the Firebase features as you need -->
-    <!--    <script defer src="/__/firebase/9.12.1/firebase-auth-compat.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tela Login</title>
+
+  <!-- update the version number as needed -->
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/login.js"></script>
+  <!--    <script defer src="/__/firebase/9.12.1/firebase-app-compat.js"></script> -->
+  <!-- include only the Firebase features as you need -->
+  <!--    <script defer src="/__/firebase/9.12.1/firebase-auth-compat.js"></script>
     <script defer src="/__/firebase/9.12.1/firebase-database-compat.js"></script>
     <script defer src="/__/firebase/9.12.1/firebase-firestore-compat.js"></script>
     <script defer src="/__/firebase/9.12.1/firebase-functions-compat.js"></script>
@@ -19,47 +21,48 @@
     <script defer src="/__/firebase/9.12.1/firebase-remote-config-compat.js"></script>
     <script defer src="/__/firebase/9.12.1/firebase-performance-compat.js"></script>-->
 
-    <!-- 
+  <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
-    <!--    <script defer src="/__/firebase/init.js?useEmulator=true"></script> -->
-    <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
-    
-    <link rel="stylesheet" href="style/login.css">
-  </head>
-  <body>
-    <div class="container">
-      <h1>Tela de Login</h1> 
-      <input type="text" class="email" id="email" placeholder="E-mail"> <br>
-      <input type="password" class="senha" id="senha" placeholder="Senha"> <br>
-      <button type="submit">LogIn</button> <br>
-      <span>Ainda não possui conta? <b><a href="cadastrar.html">Cadastre-se</a></b></span>
-    </div>
+  <!--    <script defer src="/__/firebase/init.js?useEmulator=true"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+  <link rel="stylesheet" href="style/login.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Tela de Login</h1>
+    <input type="text" class="email" id="email" placeholder="E-mail"> <br>
+    <input type="password" class="senha" id="senha" placeholder="Senha"> <br>
+    <button type="submit" onclick="login()">LogIn</button> <br>
+    <span>Ainda não possui conta? <b><a href="cadastrar.html">Cadastre-se</a></b></span>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const loadEl = document.querySelector('#load');
+      try {
+        let app = firebase.app();
+        let features = [
+          'auth',
+          'database',
+          'firestore',
+          'functions',
+          'messaging',
+          'storage',
+          'analytics',
+          'remoteConfig',
+          'performance',
+        ].filter(feature => typeof app[feature] === 'function');
+        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+      } catch (e) {
+        console.error(e);
+        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+      }
+    });
+  </script>
+</body>
+
 </html>
