@@ -41,6 +41,9 @@
     <span>Ainda não possui conta? <b><a href="cadastrar.html">Cadastre-se</a></b></span>
   </div>
   <script>
+    const app = firebase.initializeApp(firebaseConfig);
+  </script>
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
       const loadEl = document.querySelector('#load');
       try {
