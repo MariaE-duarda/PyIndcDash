@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/cadastro.css">
+    <script src="js/login.js"></script>
     <script src="js/firebaseConfig.js"></script>
     <title>Cadastro</title>
     <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore-compat.js"></script>
 </head>
+
 <body>
 
     <div class="container">
         <h1>Tela de cadastro</h1>
         <input type="text" placeholder="Usuário"> <br>
-        <input type="email" placeholder="E-mail"> <br>
-        <input type="password" placeholder="Senha"> <br>
-        <button type="submit">Cadastrar-se</button> <br>
+        <input type="email" id="email" placeholder="E-mail"> <br>
+        <input type="password" id="senha" placeholder="Senha"> <br>
+        <button type="submit" onclick="register()">Cadastrar-se</button> <br>
         <span>Já possui conta? <b><a href="index.html">Fazer Login</a></b></span>
     </div>
 </body>
+
+<script>
+    const app = firebase.initializeApp(firebaseConfig);
+</script>
+
 </html>
