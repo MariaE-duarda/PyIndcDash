@@ -16,23 +16,29 @@ h1{
 }
 
 input{
-    margin-left: 35%;
     align-items: center;
     width: 30%;
     height: 20px;
 }
 
 button{
-    margin-left: 35%;
     width: 30.5%;
     height: 25px;
     margin-bottom: 20px;
     font-weight: 600;
+    
+}
+
+.container2{
+    text-align: center;
+}
+
+.login{
+    text-align: center;
 }
 
 span{
     margin-top: 20px;
-    margin-left: 41%;
     font-size: 15px;
 }
 

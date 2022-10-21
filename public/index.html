@@ -26,15 +26,20 @@
   <!--    <script defer src="/__/firebase/init.js?useEmulator=true"></script> -->
 
   <link rel="stylesheet" href="style/login.css">
+  <link rel="stylesheet" href="style/responsividadeRegistro.css">
 </head>
 
 <body>
   <div class="container">
     <h1>Tela de Login</h1>
-    <input type="text" class="email" id="email" placeholder="E-mail"> <br>
-    <input type="password" class="senha" id="senha" placeholder="Senha"> <br>
-    <button type="submit" onclick="login()">LogIn</button> <br>
-    <span>Ainda não possui conta? <b><a href="cadastrar.html">Cadastre-se</a></b></span>
+    <div class="container2">
+      <input type="text" class="email" id="email" placeholder="E-mail"> <br>
+      <input type="password" class="senha" id="senha" placeholder="Senha"> <br>
+      <button type="submit" onclick="login()">LogIn</button> <br>
+    </div>
+    <div class="cadastrar">
+      <span>Ainda não possui conta? <b><a href="cadastrar.html">Cadastre-se</a></b></span>
+    </div>
   </div>
   <script>
     const app = firebase.initializeApp(firebaseConfig);
