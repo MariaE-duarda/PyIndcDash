@@ -7,8 +7,6 @@
   <title>Tela Login</title>
 
   <!-- update the version number as needed -->
-  <script src="js/firebaseConfig.js"></script>
-  <script src="js/login.js"></script>
   <!--    <script defer src="/__/firebase/9.12.1/firebase-app-compat.js"></script> -->
   <!-- include only the Firebase features as you need -->
   <!--    <script defer src="/__/firebase/9.12.1/firebase-auth-compat.js"></script>
@@ -26,8 +24,6 @@
       to avoid connecting the SDK to running emulators.
     -->
   <!--    <script defer src="/__/firebase/init.js?useEmulator=true"></script> -->
-  <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
 
   <link rel="stylesheet" href="style/login.css">
 </head>
@@ -42,6 +38,8 @@
   </div>
   <script>
     const app = firebase.initializeApp(firebaseConfig);
+    export default app
+    export const auth = getAuth(app) 
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -66,6 +64,11 @@
       }
     });
   </script>
+  <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.9.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/login.js"></script>
 </body>
 
 </html>

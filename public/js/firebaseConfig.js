@@ -1,3 +1,5 @@
+// Import the functions you need from the SDKs you need
+
 const firebaseConfig = {
   apiKey: "AIzaSyBpwbHoieDnt6msEAkud0FDoZH2wUucOuA",
   authDomain: "projeto-python-44ade.firebaseapp.com",
@@ -8,4 +10,5 @@ const firebaseConfig = {
   appId: "1:296232574311:web:f0eec2d6e175b139b163c2"
 };
 
-
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
