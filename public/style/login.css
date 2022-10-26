@@ -88,9 +88,9 @@ input{
 }
 
 .input-check{
-    width: 25px;
-    height: 25px;
-    border-radius: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
 }
 
 label{
@@ -122,6 +122,13 @@ button{
     font-size: 15px;
     color: white;
     font-weight: 500;
+    cursor: pointer;
+    transition: .4s;
+}
+
+button:hover{
+    background-color: var(--color-button-hover);
+    letter-spacing: 1px;
 }
 
 .cadastrar{
