@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style/login.css">
-  <link rel="stylesheet" href="style/responsividadeRegistro.css">
+  <link rel="stylesheet" href="style/root.css">
   <title>Tela Login</title>
 
   <!-- update the version number as needed -->
@@ -35,6 +35,16 @@
       <div class="container2">
         <input type="text" class="email" id="email" placeholder="E-mail"> <br>
         <input type="password" class="senha" id="senha" placeholder="Senha"> <br>
+      </div>
+      <div class="options">
+        <div class="lembrar-me">
+          <input class="input-check" type="checkbox" id="lembrar-me" class="lembrar-me"> <label>Lembrar-me</label>
+        </div>
+        <div class="password">
+          <span class="forget-password">Esqueceu a sua senha?</span>
+        </div>
+      </div>
+      <div class="container2">
         <button type="submit" onclick="login()">LogIn</button> <br>
       </div>
       <div class="cadastrar">
@@ -42,7 +52,7 @@
       </div>
     </div>
     <div class="img-login"> <!--Contém a imagem-->
-
+      <img style="width: 618px;" src="img/Agreement-bro.svg" alt="">
     </div>
   </div>
 </body>
