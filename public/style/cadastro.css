@@ -59,6 +59,14 @@ a{
     font-family: Lexend;
 }
 
+body{
+    height: 100vh;
+    background-size: 400% 200%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .all{
     display: flex;
     height: 100%;

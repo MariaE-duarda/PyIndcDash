@@ -49,6 +49,14 @@ a{
     font-family: Lexend;
 }
 
+body{
+    height: 100vh;
+    background-size: 400% 200%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .all{
     display: flex;
     height: 100%;
@@ -135,4 +143,32 @@ button:hover{
 .cadastrar{
     text-align: center;
     margin-top: 35px;
+}
+
+.imgTablet{
+    display: none;
+    margin-top: 100px;
+}
+
+@media(max-width: 730px){
+    .img-login{
+        display: none;
+    }
+    input{
+        width: 70%;
+    }
+    button{
+        width: 70%;
+    }
+    .container{
+        width: 100%;
+    }
+    h1{
+        margin-top: -10px;
+    }
+    .imgTablet{
+        display: block;
+        margin-top: 70px;
+        text-align: center;
+    }
 }
