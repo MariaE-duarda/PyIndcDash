@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /*body{
     margin: 0;
@@ -55,7 +56,15 @@ a{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Poppins;
+    font-family: Lexend;
+}
+
+body{
+    height: 100vh;
+    background-size: 400% 200%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .all{
@@ -96,7 +105,7 @@ input{
     border: none;
     border-radius: 10px;
     height: 50px;
-    width: 462px;
+    width: 80%;
     margin-top: 20px;
     padding-left: 15px;
     align-items: center;
@@ -104,7 +113,7 @@ input{
 
 button{
     height: 50px;
-    width: 462px;
+    width: 80%;
     border: none;
     border-radius: 10px;
     margin-top: 40px;
@@ -125,4 +134,61 @@ button:hover{
 .login{
     text-align: center;
     margin-top: 35px;
+}
+
+.imgTablet{
+    display: none;
+}
+
+.imageCadastro{
+    width: 85%; 
+    margin-top: 18px;
+}
+
+@media(max-width: 1240px){
+    .imageCadastro{
+        margin-top: 70px;
+    }
+}
+
+@media(max-width: 1150px){
+    h1{
+        font-size: 42px;
+    }
+    .imageCadastro{
+        margin-top: 100px;
+    }
+}
+
+@media(max-width: 890px){
+    h1{
+        font-size: 38px;
+    } 
+    .imageCadastro{
+        margin-top: 120px;
+    }
+}
+
+@media(max-width: 730px){
+    .img-cadastro{
+        display: none;
+    }
+    .container{
+        width: 100%;
+    }
+    input{
+        width: 70%;
+    }
+    button{
+        width: 70%;
+    }
+    h1{
+        margin-top: 20px;
+        font-size: 40px;
+    }
+    .imgTablet{
+        display: block;
+        margin-top: 100px;
+        text-align: center;
+    }
 }
