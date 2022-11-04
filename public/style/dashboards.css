@@ -24,6 +24,24 @@ h2{
     font-weight: 500;
 }
 
+select{
+    background-color: #272727;
+    color: white;
+    height: 35px;
+    width: 250px;
+    margin-left: 10%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-family: Lexend;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+option{
+    font-size: 15px;
+}
+
 @media(max-width: 470px){
     .title{
         font-size: 32px;
