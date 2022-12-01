@@ -1,0 +1,17 @@
+.title{
+    margin-top: 130px;
+    margin-bottom: 60px;
+    margin-left: 10%;
+}
+
+.square{
+    height: 300px;
+    width: 80%;
+    background-color: #959595ab;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+
+h2{
+    margin-left: 10%;
+}

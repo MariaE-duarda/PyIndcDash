@@ -1,0 +1,37 @@
+.title{
+    margin-top: 130px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    font-size: 40px;
+}
+
+select{
+    background-color: #272727;
+    color: white;
+    height: 35px;
+    width: 250px;
+    margin-left: 10%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-family: Lexend;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+option{
+    font-size: 15px;
+}
+
+.square{
+    height: 300px;
+    width: 80%;
+    background-color: #959595ab;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+
+h2{
+    margin-left: 10%;
+    margin-bottom: 0;
+}
