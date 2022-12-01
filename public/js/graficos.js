@@ -1,4 +1,7 @@
+
+
 var dados_graph = JSON.parse(localStorage.getItem('dados')) || {};
+
 //pegarDados()
 async function pegarDados() {
     firebase.firestore().collection('DADOS').get().then(snapshot => {
@@ -159,36 +162,49 @@ async function getDolar() {
     var ano = parseInt(document.getElementById('ano').value);
     console.log(ano)
     var dolar = [['Dia', 'Dólar']]
-    try {
-        await firebase.firestore().collection('cambio_dolar3').where('ano', '>=', ano).orderBy('ano').orderBy('mes').orderBy('dia').get().then(snapshot => {
-            var lista = []
-            var dados = snapshot.docs.map(doc => doc.data())
-            // console.log(dados)
-            for (var i in dados) {
-                var tupla = [dados[i]['data'], parseFloat(dados[i]['valor'])]
-                dolar.push(tupla)
-            }
-            console.log(dolar)
-        })
-    } catch {
-        //dolar = JSON.parse(localStorage.getItem(`dolar`)) || []
-    }
+    // try {
+    //     await firebase.firestore().collection('cambio_dolar3').where('ano', '>=', ano).orderBy('ano').orderBy('mes').orderBy('dia').get().then(snapshot => {
+    //         var lista = []
+    //         var dados = snapshot.docs.map(doc => doc.data())
+    //         // console.log(dados)
+    //         for (var i in dados) {
+    //             var tupla = [dados[i]['data'], parseFloat(dados[i]['valor'])]
+    //             dolar.push(tupla)
+    //         }
+    //         console.log(dolar)
+    //     })
+    // } catch {
+    //     console.log('Aconteceu algum erro')
+    //     dolar = JSON.parse(localStorage.getItem(`dolar`)) || []
+    // }
+    await firebase.firestore().collection('cambio_dolar3').where('ano', '>=', ano).orderBy('ano').orderBy('mes').orderBy('dia').get().then(snapshot => {
+        var lista = []
+        var dados = snapshot.docs.map(doc => doc.data())
+        // console.log(dados)
+        for (var i in dados) {
+            var tupla = [dados[i]['data'], parseFloat(dados[i]['valor'])]
+            dolar.push(tupla)
+        }
+        console.log(dolar)
+    })
     localStorage.setItem('dolar', JSON.stringify(dolar))
     drawChart(dolar)
 }
 
 function resgatarDolar() {
+    console.log('oi')
     var filtroDolar = [['Dia', 'Dólar']]
     var ano = parseInt(document.getElementById('ano').value);
+    console.log(ano)
     dolar.forEach((dolar) => {
-        if (ano => dolar['ano']) {
-            console.log(dolar['data'])
-            var cotacaoDolar = [dolar['data'], parseFloat(dolar['valor'])]
+        console.log(dolar['ano'])
+        if (dolar['ano'] > ano || dolar['ano'] == ano) {
+            var cotacaoDolar = [dolar[0], parseFloat(dolar[1])]
             filtroDolar.push(cotacaoDolar)
         }
     })
     localStorage.setItem('dolar', JSON.stringify(filtroDolar))
-    console.log(dolar)
+    //console.log(dolar)
     drawChart(dolar)
 }
 
@@ -223,3 +239,19 @@ function drawChartBar3() {
     var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
     chart.draw(view, options);
 }
+teste()
+function teste({ data }) {
+
+    console.log(data)
+
+}
+
+
+exports = async function getServerSideProps() {
+    const response = await fetch(`http:/localhost:8080/`)
+    const data = await response.json()
+    console.log(data)
+
+    return { props: { data } }
+}
+exports = teste

@@ -1,4 +1,4 @@
-pegarDolar()
+//pegarDolar()
 async function pegarDolar() {
     var lista = []
     // firebase.firestore().collection('DADOS').doc('CAMBIO_DOLAR').collection('CAMBIO_DOLAR').doc('infos').collection('infos').get().then(snapshot => {
@@ -36,3 +36,5 @@ async function pegarDolar() {
     // console.log(resposta.body)
     //firebase.firestore().collection('cambio_dolar2').doc().set({})
 }
+
+
